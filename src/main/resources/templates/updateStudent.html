@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<title>Update Student</title>
+</head>
+<body>
+	<form class="form-horizontal" th:action="@{/updateStudent/Submit}" th:object="${student}" method="post">
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="Name">Nombre:</label>
+				<div class="col-md-4">
+					<input id="Name" th:field="*{name}" th:value="${student.name}" value="student.name" name="Name" type="text" placeholder="Name..."
+						class="form-control input-md"> 
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="Surname">Apellido:</label>
+				<div class="col-md-4">
+					<input id="Surname"  th:field="*{surname}" th:value="${student.surname}" name="Surname" type="text" placeholder="Surname..." class="form-control input-md">
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="Age">Edad:</label>
+				<div class="col-md-4">
+					<input id="Age" th:field="*{age}" th:value="${student.age}"name="Age" type="text" placeholder="Age..." class="form-control input-md"> 
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="Enviar">Enviar:</label>
+				<div class="col-md-4">
+					<button id="Enviar" name="Enviar" class="btn btn-primary">Añadir</button>
+				</div>
+			</div>
+	
+	</form>
+</body>
+</html>
