@@ -9,7 +9,7 @@
 <body>
 	<form th:object="${student}" th:action="@{/deleteStudent/submit}" method="POST">
 		<h1>Borrar al estudiante</h1>
-		<h1 th:text="${estudiante.name}"></h1>
+		<h1 th:text="${student.name}"></h1>
 		<input id="name" th:field="*{name}" th:value="${student.name}" readonly>
 		<input id="surname" th:field="*{surname}" th:value="${student.surname}" readonly>
 		<input id="age" th:field="*{age}" th:value="${student.age}" readonly>
